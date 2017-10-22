@@ -1,22 +1,27 @@
 /**
  * TrumpTweets
  * 
- * Documentation for C3: see http://c3js.org/gettingstarted.html
+ * Skeleton code.
+ * Filter all tweet-data contained in 'tweets',
+ * keep only tweets sent from Android.
+ * Show retweet-count in graph.
  *
+ * Remember: map, filter and reduce are your friends.
  */
 
-const tweetData = tweets.map(tweet => {
-    return { retweets: tweet.retweet_count };
-});
+function isTweetFromAndroid(tweet) {
+    return  tweet.source === 'Twitter for Android';
+}
 
+
+const chartData = tweets.filter(isTweetFromAndroid);
 
 const mychart = c3.generate({
     bindto: "#chart",
     data: {
-        keys: { value: ["retweets"] },
-        json: tweetData
+        keys: { value: ["retweet_count"] },
+        json: chartData
     }
 });
 
-// convert stupid twitter date format:
-// Just use new Date(tweet.created_at)
+
