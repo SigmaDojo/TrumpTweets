@@ -29,6 +29,7 @@ Vi kommer även att använda oss av C3 som är ett grafbibliotek för javascript
 
 Inne i 'app.js' har du tillgång till variablen tweets, som är en array av tweets. Varje tweet har följande struktur:
 
+```javascript
   {
     source: "Twitter for iPhone",
     text: "blah, blah...",
@@ -38,16 +39,16 @@ Inne i 'app.js' har du tillgång till variablen tweets, som är en array av twee
     is_retweet: false,
     id_str: "921891186352287744"
   }
-  
+```
 
 ## Tips och tricks
 
 * Tänk på att datan även innehåller re-tweets, dvs tweets som Trump _inte_ skrivit själv.
 * Map, filter och reduce kan vara användbart vid den här typen av uppgifter.
 * Du kan konvertera datum-strängen (created_at) till ett javascript Date-object, genom att helt enkelt använda:
-
+```javascript
     let tweetDate = new Date(tweet.created_at);
-
+```
 
 
 ## Länkar
@@ -55,4 +56,5 @@ Inne i 'app.js' har du tillgång till variablen tweets, som är en array av twee
 * C3 http://c3js.org/gettingstarted.html
 * C3 referens: http://c3js.org/reference.html
 * moments https://momentjs.com/
-* http://www.trumptwitterarchive.com/archive
+* Twitter data kommer från http://www.trumptwitterarchive.com/archive
+
