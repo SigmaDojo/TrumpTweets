@@ -1,0 +1,10 @@
+# Trumpalizer
+
+Filen data.js innehåller 2052 tweets (2017-01-01 - 2017-10-22).
+
+- Hur många tweets är _inte_ från en iPhone?
+- Vilka tweets har flest likes?
+- Vilka tweets har flest retweets?
+
+
+Note: filtrera på is_retweet???
