@@ -55,6 +55,6 @@ Inne i 'app.js' har du tillgång till variablen tweets, som är en array av twee
 
 * C3 http://c3js.org/gettingstarted.html
 * C3 referens: http://c3js.org/reference.html
-* moments https://momentjs.com/
+* moments https://momentjs.com/ (kanske i kombination med https://momentjs.com/timezone/ för att hantera tidszoner)
 * Twitter data kommer från http://www.trumptwitterarchive.com/archive
 
