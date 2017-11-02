@@ -1,33 +1,18 @@
 # TrumpTweets
 
-## Uppgift
+## Overview
 
-### Del 1
+Donald Trump is an active Twitter user, we have a data set with around 2k of Trumps tweets
+and would like to have some answers to our questions(in the next section). We have prepared a HTML/JavaScript
+template with the most basic things: a graph library (C3.js), jquery, moment.js and the
+Twitter data (If you prefer other libraries, tools or languages you are free to use
+them!).
 
-Skapa ett diagram som visar vilken timme på dygnet som Trump är som mest aktiv.
-X-axeln skall alltså visa timme på dygnet (00 - 23), och Y-axeln skall visa antal tweets.
+To start using the template, open 'index.html' in your browser and start editing 'app.js'
+in your favorit editor. In 'app.js' you can access the variable 'tweets', the variable
+contains a list with all the tweets.
 
-
-### Del 2
-
-Svara på följande frågor:
-- Hur många tweets av de som Trump skrivit är _inte_ från en iPhone?
-- Vilket av Trumps tweets har flest likes?
-- Vilket datum twittrade Trump som mest?
-
-
-Du hittar grafbiblioteket C3.js (och dess dependencies D3 och jQuery), samt även moments.js, som är ett bibliotek för datum-hantering.
-Det är fritt fram att använda andra verktyg - vill du exempelvis skriva en backend i C# så går det bra.
-
-
-## Överblick
-
-Vi vill få svar på en del frågor om Donald Trumps twittrande. Till vår hjälp har vi en fil med drygt 2000 av Trumps tweets.
-Vi kommer även att använda oss av C3 som är ett grafbibliotek för javascript (baserat på det populära D3).
-
-Öppna filen 'index.html' i din webbläsare. Öppna sedan filen 'app.js' i din text-editor, och hacka loss.
-
-Inne i 'app.js' har du tillgång till variablen tweets, som är en array av tweets. Varje tweet har följande struktur:
+Here is an example on how a Twitter tweet object looks like in the JSON format:
 
 ```javascript
   {
@@ -41,20 +26,37 @@ Inne i 'app.js' har du tillgång till variablen tweets, som är en array av twee
   }
 ```
 
-## Tips och tricks
+In the end of the event we will looks throught your different solutions, so try to make
+them look nice! As said, JavaScript is nice but if you wold like to solve any of the
+questions in another language, feel free (Bonus points for Haskell ;)!
 
-* Tänk på att datan även innehåller re-tweets, dvs tweets som Trump _inte_ skrivit själv.
-* Map, filter och reduce kan vara användbart vid den här typen av uppgifter.
-* Du kan konvertera datum-strängen (created_at) till ett javascript Date-object, genom att helt enkelt använda:
-```javascript
-    let tweetDate = new Date(tweet.created_at);
-```
+## Questions
+
+### Part 1
+
+Create a diagram that show what hours (00-23) that Trump is most active. This can be any kind of
+diagram, bar chart, line chart, step chart and so on.
+
+### Part 2
+
+Answer the questions:
+- How many tweets are in the data set?
+- How many of the tweets are NOT from an iPhone?
+- What tweet got the most likes?
+- What is the highest amount of favorites he recieved?
+- What is the highest amount of favorites recieved on a retweet?
+- What date did Trump publish most number of tweets?
+
+## Tips and tricks
+
+- Within the data set there are some re-tweets that Trump has not written.
+- map, filter and reduce are really nice functions.
+- You can convert the date string 'created_at' to a JavaScript with the help of 'let tweetDate = new Date(tweet.created_at);'
 
 
-## Länkar
+## Links
 
 * C3 http://c3js.org/gettingstarted.html
-* C3 referens: http://c3js.org/reference.html
-* moments https://momentjs.com/ (kanske i kombination med https://momentjs.com/timezone/ för att hantera tidszoner)
-* Twitter data kommer från http://www.trumptwitterarchive.com/archive
-
+* C3 reference: http://c3js.org/reference.html
+* moment.js https://momentjs.com/ (maybe in combination with https://momentjs.com/timezone/ to handle timezones)
+* Twitter data comes from http://www.trumptwitterarchive.com/archive
